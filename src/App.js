@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import "./App.css";
 import { InputLabel, Select, MenuItem } from "@mui/material";
-import MoviesList from "./comonents/MoviesList";
-import UserLoginPage from "./comonents/UserLoginPage";
+
+// Lazy Loading
+const MoviesList = React.lazy(()=> import('./comonents/MoviesList'))
+const UserLoginPage =  React.lazy(()=> import('./comonents/UserLoginPage'))
 
 /** App Component */
 function App() {
@@ -31,9 +33,13 @@ function App() {
         </Select>
       </div>
       {userLoggedIn ? (
-        <MoviesList />
+        <Suspense fallback={<div>Loading...</div>}>
+          <MoviesList />
+        </Suspense>
       ) : (
-        <UserLoginPage setUserLoggedIn={setUserLoggedIn} language={language} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <UserLoginPage setUserLoggedIn={setUserLoggedIn} language={language} />
+        </Suspense>
       )}
     </div>
   );
