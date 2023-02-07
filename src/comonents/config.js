@@ -8,6 +8,22 @@ const listOfKeywords = [
       akan: "Edin a ɔde di dwuma:"
     },
     {
+      key: "college",
+      english: "College:",
+      arabic: "Arabic",
+      german: "German",
+      spanish: "Spanish",
+      akan: "Akan"
+    },
+    {
+      key: "collegeTitle",
+      english: "Enter College...",
+      arabic: "Arabic",
+      german: "German",
+      spanish: "Spanish",
+      akan: "Akan"
+    },
+    {
       key: "password",
       english: "Password:",
       arabic: "kalimat almurur:",

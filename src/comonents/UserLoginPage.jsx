@@ -12,6 +12,7 @@ const UserLoginPage = (props) => {
   const [nameError, setNameError] = useState(false);
   const [passError, setPassError] = useState(false);
   const [userDetails, setUserDetails] = useState({});
+  const [college, setCollege] = useState("");
   console.log(userDetails)
 
   return (
@@ -45,8 +46,14 @@ const UserLoginPage = (props) => {
           </div>
           {passError ? <p>{getBiLangKeyword("passwdError", language)}</p> : ""}
           <div className="college-box">
-            <label>{getBiLangKeyword("college", language)}</label>
-            <input type="text" />
+            <label><b>{getBiLangKeyword("college", language)}</b></label>
+            <input 
+              type="text"
+              style={{ marginLeft: "35px"}}
+              placeholder={getBiLangKeyword("collegeTitle", language)}
+              value={college}
+              onChange={(e) => setCollege(e.target.value)}
+            />
           </div>
           <div className="btn-box">
             <button
