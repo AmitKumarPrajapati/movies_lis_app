@@ -44,6 +44,10 @@ const UserLoginPage = (props) => {
             />
           </div>
           {passError ? <p>{getBiLangKeyword("passwdError", language)}</p> : ""}
+          <div className="college-box">
+            <label>{getBiLangKeyword("college", language)}</label>
+            <input type="text" />
+          </div>
           <div className="btn-box">
             <button
               className="reset-btn"

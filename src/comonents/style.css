@@ -7,7 +7,7 @@
 }
 
 .user-box {
-    border: 3px solid black;
+    border: 3px solid darkolivegreen;
     position: relative;
     left: 35%;
     margin-top: 8%;
@@ -15,7 +15,7 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
-    background-color: beige;
+    background-color: lightskyblue;
 }
 
 .name-box {

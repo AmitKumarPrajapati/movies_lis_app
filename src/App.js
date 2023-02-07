@@ -30,8 +30,12 @@ function App() {
         >
           <MenuItem value="english">English</MenuItem>
           <MenuItem value="arabic">Arabic</MenuItem>
+          <MenuItem value="german">German</MenuItem>
+          <MenuItem value="spanish">Spanish</MenuItem>
+          <MenuItem value="akan">Akan</MenuItem>
         </Select>
       </div>
+      <h2>User login form</h2>
       {userLoggedIn ? (
         <Suspense fallback={<div>Loading...</div>}>
           <MoviesList />
