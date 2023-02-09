@@ -3,13 +3,21 @@ export const handleReset = (
     setPassword,
     setNameError,
     setPassError,
-    setUserDetails
+    setUserDetails,
+    setAge,
+    setCollege,
+    setBranch,
+    setClass,
   ) => {
     setName("");
     setPassword("");
     setNameError(false);
     setPassError(false);
     setUserDetails({});
+    setAge("");
+    setCollege("");
+    setBranch("");
+    setClass("");
   };
   
   export const handleClick = (

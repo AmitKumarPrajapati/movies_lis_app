@@ -13,6 +13,9 @@ const UserLoginPage = (props) => {
   const [passError, setPassError] = useState(false);
   const [userDetails, setUserDetails] = useState({});
   const [college, setCollege] = useState("");
+  const [age, setAge] =useState("");
+  const [branch, setBranch] =useState("")
+  const [classOne, setClass] = useState("")
   console.log(userDetails)
 
   return (
@@ -53,8 +56,42 @@ const UserLoginPage = (props) => {
               placeholder={getBiLangKeyword("collegeTitle", language)}
               value={college}
               onChange={(e) => setCollege(e.target.value)}
+              
             />
           </div>
+          <div className="age-box">
+            <label><b>{getBiLangKeyword("age", language)}</b></label>
+            <input
+            type="text"
+            style={{ marginLeft: "60px"}}
+            placeholder={getBiLangKeyword("ageTitle", language)}
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            />
+          </div>
+          <div className="branch-box">
+            <label><b>{getBiLangKeyword("branch", language)}</b></label>
+            <input
+            type="text"
+            style={{ marginLeft: "40px"}}
+            placeholder={getBiLangKeyword("branchTitle", language)}
+            value={branch}
+            onChange={(e) => setBranch(e.target.value)}
+            />
+          </div>
+          <div className="class-box">
+            <label><b>{getBiLangKeyword("class", language)}</b></label>
+            <input
+            type="text"
+            style={{ marginLeft: "60px"}}
+            placeholder={getBiLangKeyword("classTitle", language)}
+            value={classOne}
+            onChange={(e) => setClass(e.target.value)}
+            />
+          </div>
+
+
+          
           <div className="btn-box">
             <button
               className="reset-btn"
@@ -65,15 +102,19 @@ const UserLoginPage = (props) => {
                   setPassword,
                   setNameError,
                   setPassError,
-                  setUserDetails
+                  setUserDetails,
+                  setAge,
+                  setCollege,
+                  setBranch,
+                  setClass,
                 )
               }
             >
               {getBiLangKeyword("reset", language)}
             </button>
             <button
-              disabled={!name || !password}
-              className={!name || !password ? "btn-disabled" : "submit-btn"}
+              disabled={!name || !password || !college || !age || !branch || !classOne }
+              className={!name || !password || !college || !age || !branch || !classOne ?  "btn-disabled" : "submit-btn"}
               type="button"
               onClick={() =>
                 handleClick(
@@ -91,8 +132,8 @@ const UserLoginPage = (props) => {
               {getBiLangKeyword("submit", language)}
             </button>
           </div>
+          </div>
         </div>
-      </div>
     </form>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState, Suspense } from "react";
 import "./App.css";
 import { InputLabel, Select, MenuItem } from "@mui/material";
+import { getBiLangKeyword } from "./comonents/config";
 
 // Lazy Loading
 const MoviesList = React.lazy(()=> import('./comonents/MoviesList'))
@@ -35,7 +36,7 @@ function App() {
           <MenuItem value="akan">Akan</MenuItem>
         </Select>
       </div>
-      <h2>User login form</h2>
+      <h2>{getBiLangKeyword("userLogin",language)}</h2>
       {userLoggedIn ? (
         <Suspense fallback={<div>Loading...</div>}>
           <MoviesList />

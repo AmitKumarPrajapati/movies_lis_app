@@ -10,18 +10,79 @@ const listOfKeywords = [
     {
       key: "college",
       english: "College:",
-      arabic: "Arabic",
-      german: "German",
-      spanish: "Spanish",
-      akan: "Akan"
+      arabic: "kuliya:",
+      german: "Hochschule:",
+      spanish: "Colega:",
+      akan: "Kolegyi:"
+    },
+    {
+      key: "age",
+      english: "Age:",
+      arabic: "eumar:",
+      german: "Alter:",
+      spanish: "Edad:",
+      akan: "Mfeɛ:",
+    },
+    {
+      key: "userLogin",
+      english: "User login form",
+      arabic: "namudhaj tasjil dukhul almustakhdam",
+      german: "Anmeldeformular für Benutzer",
+      spanish: "Formulario de inicio de sesión de usuario",
+      akan: "Ɔdefo login kratasin"
+
     },
     {
       key: "collegeTitle",
       english: "Enter College...",
-      arabic: "Arabic",
-      german: "German",
-      spanish: "Spanish",
-      akan: "Akan"
+      arabic: "'adkhul alkulia...",
+      german: "Geben Sie das College ein...",
+      spanish: "ingresar a la universidad...",
+      akan: "Hyɛn Kɔlege mu..."
+    },
+    {
+      key: "ageTitle",
+      english: "Enter Age...",
+      arabic: "adkhal aleumur",
+      german: "Alter eingeben",
+      spanish:"Ingrese la edad",
+      akan: "Hyehyɛ Age mu"
+    },
+    {
+      key: "branchTitle",
+      english: "Enter Branch...",
+      arabic: "adkhul alfare...",
+      german: "Filiale eingeben...",
+      spanish: "Ingresar Sucursal...",
+      akan: "Hyɛn Baa Dwumadibea no mu...",
+    },
+    {
+      key: "branch",
+      english: "Branch:",
+      arabic: "fare:",
+      german: "Zweig:",
+      spanish: "rama:",
+      akan: "fa:",
+
+    },
+    {
+      key: "class",
+      english: "Class",
+      arabic: "fasl",
+      german: "Klasse",
+      spanish: "Clase",
+      akan: "Klaase",
+
+    },
+    {
+      key: "classTitle",
+      english: "Enter Class",
+      arabic: "adkhul alfasl",
+      german: "Klasse eingeben",
+      spanish: "entrar en clase",
+      akan: "Hyɛn Adesua no mu",
+
+
     },
     {
       key: "password",
