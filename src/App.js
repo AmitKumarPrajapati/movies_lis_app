@@ -1,52 +1,41 @@
-import React, { useState, Suspense } from "react";
-import "./App.css";
-import { InputLabel, Select, MenuItem } from "@mui/material";
-import { getBiLangKeyword } from "./comonents/config";
-
-// Lazy Loading
-const MoviesList = React.lazy(()=> import('./comonents/MoviesList'))
-const UserLoginPage =  React.lazy(()=> import('./comonents/UserLoginPage'))
+import React, { useState } from "react";
+import "./styles.css";
+import Input from "./components/Input";
+import TodoList from "./components/TodoList";
 
 /** App Component */
 function App() {
-  /** State variables */
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
-  const [language, setLanguage] = useState("english");
-
-  /** handle change function for language */
-  const handleChange = (value) => {
-    setLanguage(value);
-  };
+  const [ todo, setTodo ] = useState("");
+  const [todos, setTodos ] = useState([]);
   
+  const handleButtonClick = () => {
+    const singleTodo =  todo;
+    setTodos([...todos, singleTodo])
+    setTodo("")
+  }
+
+  const handleOnChange = (event) => {
+    setTodo(event.target.value)
+  }
+
+  const handleResetBtn = () => {
+    setTodos([])
+  }
   return (
-    <div className="App">
-      <div className="lang-box">
-        <InputLabel id="demo-simple-select-label">Language</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={language}
-          label="Age"
-          onChange={(e) => handleChange(e.target.value)}
-        >
-          <MenuItem value="english">English</MenuItem>
-          <MenuItem value="arabic">Arabic</MenuItem>
-          <MenuItem value="german">German</MenuItem>
-          <MenuItem value="spanish">Spanish</MenuItem>
-          <MenuItem value="akan">Akan</MenuItem>
-        </Select>
+      <div className="main-box">
+        <div className="combined-box">
+          <div className="input-box">
+            <Input handleOnChange={handleOnChange} todo={todo} />
+          </div>
+          <div className="button-box">
+            <button type='button' onClick={handleButtonClick}>Add Todo</button>
+            <button type="button" onClick={handleResetBtn}>Reset List</button>
+          </div>
+        </div>
+        <div className="todo-list">
+          <TodoList todos={todos} />
+        </div>
       </div>
-      <h2>{getBiLangKeyword("userLogin",language)}</h2>
-      {userLoggedIn ? (
-        <Suspense fallback={<div>Loading...</div>}>
-          <MoviesList />
-        </Suspense>
-      ) : (
-        <Suspense fallback={<div>Loading...</div>}>
-          <UserLoginPage setUserLoggedIn={setUserLoggedIn} language={language} />
-        </Suspense>
-      )}
-    </div>
   );
 }
 

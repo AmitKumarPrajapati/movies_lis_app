@@ -1,0 +1,21 @@
+.main-box {
+    border: 2px dotted black;
+    width: 450px;
+    height: 500px;
+    text-align: center;
+    margin-left: 40%;
+}
+
+.combined-box {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+button {
+    width: 90px;
+    height: 22px;
+    font-size: 16px;
+    background-color: cyan;
+    margin: 2px;
+}

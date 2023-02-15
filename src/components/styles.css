@@ -1,0 +1,20 @@
+input {
+    width: 270px;
+    height: 40px;
+    font-size: 24px;
+    margin: 3px;
+}
+
+
+
+.todo-list-box {
+    width: 98%;
+    height: 400px;
+    padding: 3px;
+    padding-top: 35px;
+}
+
+.todo-para {
+    font-size: 22px;
+    color: red;
+}
